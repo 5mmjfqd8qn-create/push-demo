@@ -47,7 +47,7 @@
 
       async function ensureServiceWorker() {
         if (!("serviceWorker" in navigator)) throw new Error("No serviceWorker support");
-        const reg = await navigator.serviceWorker.register("/sw.js");
+        const reg = await navigator.serviceWorker.register("./sw.js", { scope: "./" });
         return reg;
       }
 
