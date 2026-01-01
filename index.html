@@ -107,10 +107,13 @@
         setStatus("❌ " + e.message);
       }));
 
-      btnSend.addEventListener("click", () => sendMessage().catch(e => {
-        console.error(e);
-        setStatus("❌ " + e.message);
-      }));
+      btnSend.addEventListener("click", () =>
+        sendMessage().catch(e => {
+          console.log("Send failed:", String(e));
+          setStatus("❌ " + String(e));
+        })
+      );
+      
 
       setStatus(localStorage.getItem("deviceId") ? "Ready (already subscribed)" : "Not subscribed");
     </script>
