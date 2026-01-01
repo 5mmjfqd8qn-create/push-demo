@@ -1,6 +1,6 @@
 {
   "name": "Push Demo",
   "short_name": "PushDemo",
-  "start_url": "/",
+  "start_url": "/push-demo/",
   "display": "standalone"
 }
